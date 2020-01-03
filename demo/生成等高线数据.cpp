@@ -1,9 +1,59 @@
+/*
+ * @Descripttion: 
+ * @version: 
+ * @Date: 2019-08-05 10:46:57
+ * @LastEditTime: 2019-11-18 21:32:44
+ */
 #include<iostream>
 #include<fstream>
 #include<string>
 #include<cstdio>
 #include<cstdlib>
 using namespace std;
+
+typedef struct list_len
+{
+	int data;
+	struct list_len *next;
+}LIST,*p_LIST;
+
+
+//头插法建立链表
+void node1(LIST **head,LIST **tile)
+{
+	int i;
+	LIST *new_data=NULL;
+	for(i=0;i<4;i++)
+	{
+		new_data=(LIST *)malloc(sizeof(LIST));
+		new_data->data=i*5+33;
+		new_data->next=NULL;
+		//如果链表为空
+		if(*head==NULL)
+		{
+			*head=new_data;
+			*tile=new_data;
+		}
+		else
+		{
+			new_data->next=*head;
+			*head=new_data;
+		}
+		
+	}
+}
+
+//遍历打印
+void put(LIST *tem)
+{
+	while(tem!=NULL)
+	{
+		printf("%d ",tem->data);
+		tem=tem->next;
+	}
+	printf("\n");
+}
+
 
 int main()
 {
