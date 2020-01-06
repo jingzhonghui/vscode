@@ -1,38 +1,17 @@
 /*
  * @Descripttion: 
  * @version: 
- * @Date: 2019-09-02 17:22:39
- * @LastEditTime: 2019-11-28 17:07:46
+ * @Date: 2020-01-03 16:28:38
+ * @LastEditTime : 2020-01-05 17:43:46
  */
 #include<iostream>
-#include<string>
-#include <list>
-#include<algorithm>
-#include <cstdlib>
-#include <cstring>
-
 
 using namespace std;
 
-
 int main()
 {
-   
-    string str="39";
-    string str1="j113";
-    if (str>str1)
-    {
-        cout<<str<<endl;
-    }
-    else
-    {
-        cout<<str1<<endl;
-    }
-    
-    
-    
-    
-   return 0;
+    char a='a';
+    int num=(int)a;
+    cout<<num<<endl;
+    return 0;
 }
-
-
